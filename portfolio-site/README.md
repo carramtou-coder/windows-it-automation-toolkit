@@ -11,7 +11,7 @@ A bilingual, responsive portfolio website for the projects in the Windows and Mi
 - Responsive mobile navigation with keyboard support.
 - Project category filters and live search.
 - Direct links to the project source in this repository.
-- Five GitHub Actions workflows for PowerShell analysis, compatibility parsing, portfolio checks, Pages deployment, and release packaging.
+- Five GitHub Actions workflows for PowerShell analysis, compatibility parsing, portfolio checks, Pages deployment, and package artifacts.
 - Accessible headings, labels, visible keyboard focus, and reduced-motion support.
 
 ## Repository automations
@@ -20,7 +20,7 @@ A bilingual, responsive portfolio website for the projects in the Windows and Mi
 - ../.github/workflows/powershell-compatibility.yml — parses scripts with Windows PowerShell 5.1 and PowerShell 7.
 - ../.github/workflows/portfolio-validation.yml — checks JavaScript syntax, local site files, and in-page links.
 - ../.github/workflows/deploy-portfolio.yml — publishes this folder to GitHub Pages after a relevant change on main, or from a manual run.
-- ../.github/workflows/release-package.yml — creates a source ZIP, SHA-256 checksum, and GitHub Release when a v* tag is pushed.
+- ../.github/workflows/release-package.yml — builds a source ZIP and SHA-256 checksum as a downloadable Actions artifact when a v* tag is pushed or the workflow is run manually.
 
 ## Preview locally
 
@@ -28,7 +28,7 @@ Open index.html in a modern browser. Navigation, theme, language, project filter
 
 ## Publish with GitHub Pages
 
-The workflow publishes this folder when a relevant change is pushed to main. In repository settings, choose Pages, then Build and deployment, then Source: GitHub Actions. The workflow also supports a manual run from the Actions tab.
+Choose Settings → Pages → Build and deployment → Source: GitHub Actions. The deployment workflow publishes this folder when a relevant change is pushed to main and also supports a manual run from the Actions tab.
 
 ## Files
 
