@@ -1,0 +1,5 @@
+TicketId,Client,Device,Summary,Priority,Status,SlaDueUtc,AssignedTo
+T-2041,Example Dental Group,EDG-FS01,File server backup warning,P2,In Progress,2026-09-28T22:00:00Z,Alex Morgan
+T-2042,Northstar Legal Demo,NLD-DC01,Domain controller availability,P3,New,2026-09-28T19:00:00Z,Jamie Lee
+T-2043,Riverside Fabrication Demo,RFD-APP01,Application service intermittent,P3,In Progress,2026-09-28T17:00:00Z,Taylor Reed
+T-2044,Example Dental Group,EDG-WS12,User access request,P4,Closed,2026-09-28T16:00:00Z,Alex Morgan

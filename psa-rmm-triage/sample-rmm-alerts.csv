@@ -1,0 +1,6 @@
+AlertId,Client,Device,Category,Severity,Status,Summary,FirstSeenUtc,LastSeenUtc
+A-901,Example Dental Group,EDG-FS01,Backup,Critical,Active,Latest backup job failed,2026-09-28T15:15:00Z,2026-09-28T16:15:00Z
+A-902,Example Dental Group,EDG-FS01,Backup,High,Active,Backup repository capacity warning,2026-09-28T15:45:00Z,2026-09-28T16:20:00Z
+A-903,Northstar Legal Demo,NLD-FS01,Disk,High,Active,Free disk space below threshold,2026-09-28T15:00:00Z,2026-09-28T16:10:00Z
+A-904,Riverside Fabrication Demo,RFD-APP01,Service,Medium,Active,Application service stopped unexpectedly,2026-09-28T16:00:00Z,2026-09-28T16:22:00Z
+A-905,Example Dental Group,EDG-WS12,Agent,Low,Resolved,Agent check-in restored,2026-09-28T14:00:00Z,2026-09-28T14:20:00Z
