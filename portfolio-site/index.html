@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Carl Ramses Toussaint's IT operations portfolio: practical Windows, Microsoft 365, backup, and service-desk automation projects.">
+  <meta property="og:title" content="Carl Ramses Toussaint | IT Operations Portfolio">
+  <meta property="og:description" content="Practical IT operations, endpoint reporting, and service-desk automation projects.">
+  <meta property="og:type" content="website">
+  <title>Carl Ramses Toussaint | IT Operations Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Carl Ramses Toussaint, home" data-i18n-aria-label="brandHome">
+        <span class="brand-mark" aria-hidden="true">CT</span>
+        <span class="brand-name">Carl Ramses Toussaint</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-i18n-aria-label="mainNav">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#workflows" data-i18n="navWorkflows">Automations</a>
+        <a href="#approach" data-i18n="navApproach">Approach</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button language-toggle" id="language-toggle" type="button" aria-label="Switch language to French" title="Switch language to French">FR</button>
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="heroEyebrow">IT SUPPORT · SYSTEMS · AUTOMATION</span></p>
+        <h1 id="hero-title" data-i18n="heroTitle">Good IT work makes the next step clear.</h1>
+        <p class="hero-lead" data-i18n="heroLead">I build practical, read-only tools that help technicians understand endpoint health, review operational signals, and decide what to do next.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects"><span data-i18n="ctaProjects">Explore the projects</span><span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="https://github.com/carramtou-coder/windows-it-automation-toolkit" target="_blank" rel="noopener noreferrer"><span data-i18n="ctaGithub">View GitHub repository</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-footnote"><span class="status-pip" aria-hidden="true"></span><span data-i18n="heroNote">Small tools. Clear reports. Technician stays in control.</span></div>
+      </div>
+      <div class="hero-visual" aria-label="A simple illustration of an IT health report" data-i18n-aria-label="visualLabel">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="report-card">
+          <div class="report-top"><span class="report-icon" aria-hidden="true">⌘</span><span class="report-label" data-i18n="reportLabel">FIELD NOTES / 01</span><span class="report-menu" aria-hidden="true">•••</span></div>
+          <p class="report-title" data-i18n="reportTitle">Endpoint snapshot</p>
+          <p class="report-subtitle" data-i18n="reportSubtitle">A quick view of what needs attention.</p>
+          <div class="report-row"><span class="report-check">✓</span><span data-i18n="reportInventory">Device inventory</span><span class="row-state" data-i18n="reportReady">READY</span></div>
+          <div class="report-row"><span class="report-check">✓</span><span data-i18n="reportServices">Service checks</span><span class="row-state" data-i18n="reportReady">READY</span></div>
+          <div class="report-row"><span class="report-warn">!</span><span data-i18n="reportDisk">Disk space review</span><span class="row-state row-state-warn" data-i18n="reportReview">REVIEW</span></div>
+          <div class="report-footer"><span data-i18n="reportGenerated">READ-ONLY · HUMAN REVIEW</span><span class="report-footer-mark">CT / IT</span></div>
+        </div>
+        <div class="visual-caption"><span class="caption-line"></span><span data-i18n="visualCaption">Observe → summarize → hand off</span></div>
+      </div>
+    </section>
+
+    <section class="intro-strip" aria-label="Portfolio summary">
+      <div class="section-wrap intro-inner">
+        <p data-i18n="introText">A practical portfolio built around day-to-day IT operations, with clear boundaries between reporting and action.</p>
+        <div class="intro-stat"><strong>04</strong><span data-i18n="introStat">sample projects</span></div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><p class="eyebrow" data-i18n="aboutEyebrow">A LITTLE ABOUT MY WORK</p><h2 id="about-title" data-i18n="aboutTitle">Useful tools start with a real support problem.</h2></div>
+      <div class="about-grid">
+        <p class="about-lead" data-i18n="aboutLead">My focus is the space between a technical signal and a useful next step. These examples turn device checks and exported service data into reports a technician can review.</p>
+        <div class="about-details">
+          <p data-i18n="aboutDetailOne">The projects use PowerShell, Windows built-ins, Microsoft Graph, and normalized CSV exports. They are designed to be easy to inspect and adapt.</p>
+          <p data-i18n="aboutDetailTwo">The examples are deliberately read-only: they report findings and leave the operational decision with the technician.</p>
+          <div class="skill-list" aria-label="Technologies shown in the repository" data-i18n-aria-label="techLabel"><span>PowerShell</span><span>Windows</span><span>Microsoft Graph</span><span>Intune</span><span>CSV</span><span>HTML reports</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading project-heading">
+        <div><p class="eyebrow" data-i18n="projectsEyebrow">SELECTED WORK</p><h2 id="projects-title" data-i18n="projectsTitle">Projects that make the work easier to see.</h2><p class="section-lead" data-i18n="projectsLead">Explore the code and sample workflows in the Windows and Microsoft 365 toolkit.</p></div>
+        <a class="text-link desktop-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit" target="_blank" rel="noopener noreferrer"><span data-i18n="allSource">All source code</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="project-tools">
+        <div class="filter-list" role="group" aria-label="Filter projects" data-i18n-aria-label="filterGroupLabel">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="filterAll">All</button>
+          <button class="filter-button" type="button" data-filter="endpoint" aria-pressed="false" data-i18n="filterEndpoint">Endpoint</button>
+          <button class="filter-button" type="button" data-filter="m365" aria-pressed="false" data-i18n="filterM365">Microsoft 365</button>
+          <button class="filter-button" type="button" data-filter="msp" aria-pressed="false" data-i18n="filterMsp">MSP workflow</button>
+        </div>
+        <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden" data-i18n="searchLabel">Search projects</span><input id="project-search" type="search" autocomplete="off" placeholder="Search projects or tools" data-i18n-placeholder="searchPlaceholder"><kbd>/</kbd></label>
+      </div>
+      <p class="filter-count" id="filter-count" aria-live="polite"></p>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="endpoint" data-search="windows endpoint inventory disk health service health event log powershell json">
+          <div class="card-topline"><span class="card-index">01</span><span class="card-category" data-i18n="categoryEndpoint">ENDPOINT OPERATIONS</span></div>
+          <h3 data-i18n="projectAuditTitle">Windows read-only audit</h3>
+          <p data-i18n="projectAuditText">Combines device inventory, low-disk checks, selected service checks, and a summary of recent critical and error events.</p>
+          <div class="tag-row"><span>PowerShell</span><span>Windows CIM</span><span>JSON</span></div>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/Invoke-ReadOnlyAudit.ps1" target="_blank" rel="noopener noreferrer"><span data-i18n="viewSource">View source</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card" data-category="m365" data-search="intune microsoft graph device compliance sync status powershell json">
+          <div class="card-topline"><span class="card-index">02</span><span class="card-category" data-i18n="categoryM365">MICROSOFT 365</span></div>
+          <h3 data-i18n="projectIntuneTitle">Intune device report</h3>
+          <p data-i18n="projectIntuneText">Reads managed-device compliance and sync status through Microsoft Graph, with pagination and stale-device summaries.</p>
+          <div class="tag-row"><span>Intune</span><span>Microsoft Graph</span><span>Read-only</span></div>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/Get-IntuneDeviceComplianceReport.ps1" target="_blank" rel="noopener noreferrer"><span data-i18n="viewSource">View source</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card" data-category="msp" data-search="msp backup compliance retention restore test csv html report">
+          <div class="card-topline"><span class="card-index">03</span><span class="card-category" data-i18n="categoryMsp">MSP OPERATIONS</span></div>
+          <h3 data-i18n="projectBackupTitle">Backup compliance report</h3>
+          <p data-i18n="projectBackupText">Turns a normalized CSV export into a client and device summary, plus a focused list of backup and restore-test exceptions.</p>
+          <div class="tag-row"><span>CSV</span><span>HTML</span><span>PowerShell</span></div>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/tree/main/backup-compliance" target="_blank" rel="noopener noreferrer"><span data-i18n="viewSource">View source</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card" data-category="msp" data-search="psa rmm ticket alert sla triage csv html powershell">
+          <div class="card-topline"><span class="card-index">04</span><span class="card-category" data-i18n="categoryMsp">MSP OPERATIONS</span></div>
+          <h3 data-i18n="projectTriageTitle">PSA / RMM triage report</h3>
+          <p data-i18n="projectTriageText">Matches ticket and alert exports by client and device, then creates a review queue for unlinked alerts, priorities, repeats, and SLA deadlines.</p>
+          <div class="tag-row"><span>PSA / RMM</span><span>CSV</span><span>HTML</span></div>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/tree/main/psa-rmm-triage" target="_blank" rel="noopener noreferrer"><span data-i18n="viewSource">View source</span><span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden data-i18n="emptyProjects">No projects match that search. Try another word or category.</p>
+      <div class="mobile-source-link"><a class="text-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit" target="_blank" rel="noopener noreferrer"><span data-i18n="allSource">All source code</span><span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section-wrap section-block workflows-section" id="workflows" aria-labelledby="workflows-title">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="workflowsEyebrow">AUTOMATION IN THE REPOSITORY</p>
+        <h2 id="workflows-title" data-i18n="workflowsTitle">Five workflows that keep the tools ready to use.</h2>
+        <p class="section-lead" data-i18n="workflowsLead">GitHub Actions checks code changes, publishes this site, and packages tagged releases.</p>
+      </div>
+      <div class="workflow-grid">
+        <article class="workflow-card">
+          <div class="workflow-topline"><span class="card-index">01</span><span class="workflow-trigger" data-i18n="workflowTriggerChanges">SCRIPT CHANGES</span></div>
+          <h3 data-i18n="workflowAnalysisTitle">PowerShell static analysis</h3>
+          <p data-i18n="workflowAnalysisText">Runs PSScriptAnalyzer on pull requests and main-branch changes. Analyzer errors are shown in the Actions run so issues can be fixed before the scripts are used.</p>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/.github/workflows/powershell-analysis.yml" target="_blank" rel="noopener noreferrer"><span data-i18n="workflowSource">View workflow</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="workflow-card">
+          <div class="workflow-topline"><span class="card-index">02</span><span class="workflow-trigger" data-i18n="workflowTriggerChanges">SCRIPT CHANGES</span></div>
+          <h3 data-i18n="workflowCompatibilityTitle">PowerShell compatibility</h3>
+          <p data-i18n="workflowCompatibilityText">Parses the repository’s PowerShell files with Windows PowerShell 5.1 and PowerShell 7 on Windows to catch syntax differences early.</p>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/.github/workflows/powershell-compatibility.yml" target="_blank" rel="noopener noreferrer"><span data-i18n="workflowSource">View workflow</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="workflow-card">
+          <div class="workflow-topline"><span class="card-index">03</span><span class="workflow-trigger" data-i18n="workflowTriggerSite">SITE CHANGES</span></div>
+          <h3 data-i18n="workflowValidationTitle">Portfolio quality checks</h3>
+          <p data-i18n="workflowValidationText">On portfolio changes, checks JavaScript syntax and confirms local files and in-page links resolve, so missing assets and broken sections appear in the Actions run.</p>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/.github/workflows/portfolio-validation.yml" target="_blank" rel="noopener noreferrer"><span data-i18n="workflowSource">View workflow</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="workflow-card">
+          <div class="workflow-topline"><span class="card-index">04</span><span class="workflow-trigger" data-i18n="workflowTriggerDeploy">MAIN OR MANUAL</span></div>
+          <h3 data-i18n="workflowDeployTitle">GitHub Pages deployment</h3>
+          <p data-i18n="workflowDeployText">Publishes the portfolio-site folder when it changes on main, or when manually started from the Actions tab.</p>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/.github/workflows/deploy-portfolio.yml" target="_blank" rel="noopener noreferrer"><span data-i18n="workflowSource">View workflow</span><span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="workflow-card">
+          <div class="workflow-topline"><span class="card-index">05</span><span class="workflow-trigger" data-i18n="workflowTriggerTag">VERSION TAG</span></div>
+          <h3 data-i18n="workflowReleaseTitle">Tagged release packaging</h3>
+          <p data-i18n="workflowReleaseText">When a version tag such as v1.0.0 is pushed, creates a ZIP of the source and a SHA-256 checksum as a downloadable Actions artifact.</p>
+          <a class="card-link" href="https://github.com/carramtou-coder/windows-it-automation-toolkit/blob/main/.github/workflows/release-package.yml" target="_blank" rel="noopener noreferrer"><span data-i18n="workflowSource">View workflow</span><span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="approach-band" id="approach" aria-labelledby="approach-title">
+      <div class="section-wrap approach-inner">
+        <div class="approach-heading"><p class="eyebrow" data-i18n="approachEyebrow">HOW I APPROACH IT OPERATIONS</p><h2 id="approach-title" data-i18n="approachTitle">Make the signal clear. Keep the next step human.</h2><p data-i18n="approachLead">A good operational report is useful, understandable, and careful about what it changes.</p></div>
+        <div class="approach-steps">
+          <article class="approach-step"><span>01</span><h3 data-i18n="stepOneTitle">Observe</h3><p data-i18n="stepOneText">Collect only the information needed for the check.</p></article>
+          <article class="approach-step"><span>02</span><h3 data-i18n="stepTwoTitle">Summarize</h3><p data-i18n="stepTwoText">Show exceptions in a format that is quick to review.</p></article>
+          <article class="approach-step"><span>03</span><h3 data-i18n="stepThreeTitle">Review</h3><p data-i18n="stepThreeText">Give the technician context and leave the action in their hands.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-card">
+        <div><p class="eyebrow" data-i18n="contactEyebrow">LET'S CONNECT</p><h2 id="contact-title" data-i18n="contactTitle">Want to see how one of these tools works?</h2><p class="contact-copy" data-i18n="contactText">Browse the source, sample data, and project notes on GitHub.</p></div>
+        <a class="button button-light" href="https://github.com/carramtou-coder" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">Visit my GitHub profile</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="section-wrap footer-inner"><span>© <span id="current-year"></span> Carl Ramses Toussaint</span><span data-i18n="footerNote">Built with care. No tracking. No external libraries.</span><a href="#top" class="back-top"><span data-i18n="backTop">Back to top</span><span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>
