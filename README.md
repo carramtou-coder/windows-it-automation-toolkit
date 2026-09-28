@@ -1,6 +1,6 @@
 # Windows and Microsoft 365 IT Automation Toolkit
 
-Read-only PowerShell reports for endpoint, Microsoft 365, and backup operations. Local checks use Windows built-ins. Optional reports audit Intune-managed devices through Microsoft Graph and summarize a normalized, multi-client backup export.
+Read-only PowerShell reports for Windows endpoints, Microsoft 365, and MSP service desk operations. Local checks use Windows built-ins. Optional reports audit Intune-managed devices through Microsoft Graph and summarize PSA/RMM and backup CSV exports.
 
 ## Automations
 
@@ -11,6 +11,7 @@ Read-only PowerShell reports for endpoint, Microsoft 365, and backup operations.
 - **Invoke-ReadOnlyAudit.ps1** runs the local checks and saves one combined report.
 - **Get-IntuneDeviceComplianceReport.ps1** reads Intune-managed device compliance and sync status through Microsoft Graph.
 - **backup-compliance/New-MspBackupComplianceReport.ps1** converts a normalized backup CSV export into an HTML portfolio view and an exceptions CSV, with per-client summaries and configurable backup, retention, and restore-test thresholds.
+- **psa-rmm-triage/New-PsaRmmTriageReport.ps1** matches PSA ticket exports to active RMM alert exports and builds a review queue for unlinked alerts, priority checks, repeat alerts, and approaching or overdue SLAs.
 
 ## Requirements
 
@@ -54,7 +55,7 @@ A simulated aggregate example is in demo-intune-audit-summary.json. It contains 
 
 ## Safety and data handling
 
-The scripts do not change accounts, services, registry settings, network configuration, backup jobs, retention policies, or managed devices. The Intune report makes Graph GET requests only. The backup report reads the supplied CSV and writes its HTML and CSV output locally.
+The scripts do not change accounts, services, registry settings, network configuration, backup jobs, PSA/RMM tickets or alerts, or managed devices. The Intune report makes Graph GET requests only. The backup and PSA/RMM reports read supplied CSV exports and write reports locally.
 
 Reports may contain computer names, device names, operating system details, or service status. Keep real reports local and review them before sharing. The reports folder is ignored by Git.
 
@@ -69,11 +70,19 @@ See daily-check.md and graph-audit.md for short runbooks.
 
 ## MSP backup compliance report
 
-The second project demonstrates a multi-client backup review workflow. It reads the included fictional sample export and generates reports locally:
+The backup project demonstrates a multi-client backup review workflow. It reads the included fictional sample export and generates reports locally:
 
     .\backup-compliance\New-MspBackupComplianceReport.ps1 -InputCsvPath .\backup-compliance\sample-backup-export.csv -OutputDirectory .\backup-compliance\demo-output
 
 The HTML report summarizes clients and devices; the exceptions CSV includes only rows that need attention. Defaults flag backups older than 24 hours, restore tests older than 180 days, and retention below 30 days. Set thresholds to match the service agreement or policy being reviewed. The script expects a documented CSV format and does not connect to a vendor platform. An export cannot prove recoverability; verify through actual restore tests. See [backup-compliance/README.md](backup-compliance/README.md).
+
+## PSA/RMM alert-to-ticket triage
+
+The PSA/RMM project joins fictional PSA and RMM export files by client and device name. It writes an HTML triage report and a CSV review queue:
+
+    .\psa-rmm-triage\New-PsaRmmTriageReport.ps1 -PsaTicketCsvPath .\psa-rmm-triage\sample-psa-tickets.csv -RmmAlertCsvPath .\psa-rmm-triage\sample-rmm-alerts.csv -OutputDirectory .\psa-rmm-triage\demo-output
+
+It flags active alerts without a matching open ticket, critical or high alerts linked to lower-priority tickets, repeated alerts, and missing or near/overdue SLA deadlines. The demo reads exports only and does not connect to or change a PSA/RMM system. See [psa-rmm-triage/README.md](psa-rmm-triage/README.md).
 
 ## License
 
