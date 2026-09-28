@@ -1,4 +1,5 @@
 reports/
+backup-compliance/demo-output/
 tenant-reports/
 *.log
 *.tmp
