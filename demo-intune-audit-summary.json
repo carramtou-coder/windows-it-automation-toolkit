@@ -1,0 +1,19 @@
+{
+  "Mode": "SIMULATED_EXAMPLE",
+  "GeneratedAtUtc": "2026-01-01T12:00:00Z",
+  "StaleAfterDays": 30,
+  "ManagedDeviceCount": 6,
+  "CompliantDeviceCount": 4,
+  "NonCompliantDeviceCount": 1,
+  "StaleOrNeverSyncedCount": 2,
+  "OperatingSystems": [
+    {
+      "OperatingSystem": "Windows",
+      "Count": 4
+    },
+    {
+      "OperatingSystem": "iOS",
+      "Count": 2
+    }
+  ]
+}
