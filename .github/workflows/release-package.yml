@@ -1,0 +1,31 @@
+name: Package toolkit archive
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out tagged source
+        uses: actions/checkout@v6
+
+      - name: Create source archive and checksum
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output="dist/windows-it-automation-toolkit-${GITHUB_REF_NAME}.zip" "${GITHUB_SHA}"
+          cd dist
+          sha256sum "windows-it-automation-toolkit-${GITHUB_REF_NAME}.zip" > SHA256SUMS.txt
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-it-automation-toolkit-package
+          path: dist/
